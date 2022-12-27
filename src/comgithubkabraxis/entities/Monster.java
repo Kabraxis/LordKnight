@@ -41,4 +41,9 @@ public class Monster extends Living {
     public void setName(String name) {
         super.setName(name);
     }
+
+    public boolean isDead() {
+        return super.isDead();
+    }
+
 }
