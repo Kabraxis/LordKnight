@@ -1,5 +1,6 @@
 package comgithubkabraxis.mechanics;
 
+import java.util.Random;
 import comgithubkabraxis.entities.*;
 import comgithubkabraxis.texts.Display;
 
@@ -9,9 +10,9 @@ public class Battle {
                 player.getName(), monster.getName(), player.getHealth(), monster.getHealth());
 
         while (!player.isDead() || monster.isDead()) {
-            if (Randomizer.rndRange(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {
+            if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {
                int healthPreHit = player.getHealth();
-                player.setHealth(player.getHealth() - (Randomizer.rndDMG(monster.getAttack())));
+                player.setHealth(player.getHealth() - (new Random().nextInt(1, monster.getAttack())));
                 System.out.printf("%s%s%n",
                         player.getName(), Display.hitMessage(healthPreHit, player.getHealth()));
             }
