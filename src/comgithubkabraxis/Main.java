@@ -5,10 +5,10 @@ import comgithubkabraxis.mechanics.Battle;
 
 public class Main {
     public static void main(String[] args) {
-        Player kabraxis = new Player(100, 20, "Sir Kabraxis");
-        Monster poring = new Monster(5, 15, "Poring");
+        Player knight = new Player(100, 20, "Sir Knight");
+        Monster goblin = new Monster(5, 15, "goblin");
 
-        Battle.fight(kabraxis, poring);
+        Battle.fight(knight, goblin);
 
     }
 }
