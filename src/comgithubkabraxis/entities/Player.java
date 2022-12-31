@@ -42,7 +42,4 @@ public class Player extends Living {
         super.setName(name);
     }
 
-    public boolean isDead() {
-        return super.isDead();
-    }
 }

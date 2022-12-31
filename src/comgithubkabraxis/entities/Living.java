@@ -54,8 +54,4 @@ class Living {
         this.name = name;
     }
 
-    boolean isDead() {
-        return this.getHealth() <= 0;
-    }
-
 }
