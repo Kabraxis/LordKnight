@@ -1,9 +1,9 @@
 package texts;
 
 public class Display {
-    public static void hit(String entityName, int healthPreHit, int hitPoints) {
+    public static void hit(String entityName, int entityHealthPreHit, int entityHealth) {
         System.out.printf("%s got hit for: %d DMG!\"",
-                entityName, healthPreHit - hitPoints);
+                entityName, entityHealthPreHit - entityHealth);
     }
 
     public static void miss(String entityName) {
@@ -21,8 +21,8 @@ public class Display {
                 playerName, monsterName, playerHealth, monsterHealth);
     }
 
-    public static void deathnote(String entityNamenDefender) {
+    public static void deathnote(String entityDead) {
         System.out.printf("%s is dead",
-                entityNamenDefender);
+                entityDead);
     }
 }
