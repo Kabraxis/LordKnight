@@ -1,4 +1,9 @@
-package comgithubkabraxis.entities;
+// Living is the arch-type class, containing the very basic set of fields every entity must have.
+// This leaves it open for entities with attributes like mana to be added later.
+// Living initializes all fields with default values.
+// Every entity inherits from it.
+
+package entities;
 
 class Living {
     private int health;

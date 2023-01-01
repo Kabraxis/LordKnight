@@ -1,20 +1,20 @@
-package comgithubkabraxis.entities;
+package entities;
 
-public class Monster extends Living {
+public class Player extends Living {
 
-    public Monster() {
+    public Player() {
         super();
     }
 
-    public Monster(int health) {
+    public Player(int health) {
         super(health);
     }
 
-    public Monster(int health, int attack) {
+    public Player(int health, int attack) {
         super(health, attack);
     }
 
-    public Monster(int health, int attack, String name) {
+    public Player(int health, int attack, String name) {
         super(health, attack, name);
     }
 
@@ -41,6 +41,5 @@ public class Monster extends Living {
     public void setName(String name) {
         super.setName(name);
     }
-
 
 }
