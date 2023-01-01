@@ -12,7 +12,7 @@ public class Display {
     }
 
     public static void selection() {
-        System.out.println("Select action: 1 - fight, 2 - potion, 3 - run'\n'");
+        System.out.println("Select action: 1 - attack, 2 - potion, 3 - run'\n'");
     }
 
     public static void encountering(String playerName, String monsterName,

@@ -11,8 +11,9 @@ Todo
 public class Action {
     public static void selection() {
         Scanner scanner = new Scanner(System.in);
-        Display.selection();
+        Display.selection(); // 1 - attack, 2 - potion, 3 - run
         scanner.nextLine();
+
     }
 
     public static void run() {
