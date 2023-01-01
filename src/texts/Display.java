@@ -15,10 +15,10 @@ public class Display {
         System.out.println("Select action: 1 - fight, 2 - potion, 3 - run'\n'");
     }
 
-    public static void encountering(String entityNameAttacker, String entityNameDefender,
-                                    int healthAttacker, int healthDefender) {
+    public static void encountering(String playerName, String monsterName,
+                                    int playerHealth, int monsterHealth) {
         System.out.printf("%s encounters %s!%n%1$s's HP is: %d, %2$s's HP is: %d%nCHARGE !!%n%n",
-                entityNameAttacker, entityNameDefender, healthAttacker, healthDefender);
+                playerName, monsterName, playerHealth, monsterHealth);
     }
 
     public static void deathnote(String entityNamenDefender) {
