@@ -1,4 +1,4 @@
-package comgithubkabraxis.mechanics;
+package mechanics;
 
 public class Initiative {
     public static  void whosCharge() {
