@@ -1,8 +1,8 @@
 package texts;
 
 public class Display {
-    public static String hitMessage(int healthPreHit, int hitPoints) {
-        return " got hit for: " + (healthPreHit - hitPoints) + " DMG!";
+    public static void hitMessage(String entityName, int healthPreHit, int hitPoints) {
+        System.out.println(" got hit for: " + (healthPreHit - hitPoints) + " DMG!");
     }
 
     public static String missedMessage() {

@@ -17,8 +17,7 @@ public class Battle {
                 healthPreHit = player.getHealth();
 
                 player.setHealth(player.getHealth() - (new Random().nextInt(1, monster.getAttack())));
-                System.out.printf("%s%s%n",
-                        player.getName(), Display.hitMessage(healthPreHit, player.getHealth()));
+                Display.hitMessage(player.getName(), healthPreHit, player.getHealth());
             } else {
                 System.out.printf("%s%s%n",
                         monster.getName(), Display.missedMessage());
