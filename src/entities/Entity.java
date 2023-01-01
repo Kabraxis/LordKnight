@@ -1,16 +1,16 @@
-// Living is the arch-type class, containing the very basic set of fields every entity must have.
+// Entity is the arch-type class, containing the very basic set of fields every entity must have.
 // This leaves it open for entities with attributes like mana to be added later.
-// Living initializes all fields with default values.
+// Entity initializes all fields with default values.
 // Every entity inherits from it.
 
 package entities;
 
-class Living {
+class Entity {
     private int health;
     private int attack;
     private String name;
 
-    Living() {
+    Entity() {
         final int DEFAULT_HEALTH = 10;
         final int DEFAULT_ATTACK = 5;
         final String DEFAULT_NAME = "Dummy";
@@ -20,17 +20,17 @@ class Living {
         this.name = DEFAULT_NAME;
     }
 
-    Living(int health) {
+    Entity(int health) {
         this();
         this.health = health;
     }
 
-    Living(int health, int attack) {
+    Entity(int health, int attack) {
         this(health);
         this.attack = attack;
     }
 
-    Living(int health, int attack, String name) {
+    Entity(int health, int attack, String name) {
         this(health, attack);
         this.name = name;
     }

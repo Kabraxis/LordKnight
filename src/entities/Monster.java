@@ -1,6 +1,6 @@
 package entities;
 
-public class Monster extends Living {
+public class Monster extends Entity {
 
     public Monster() {
         super();
