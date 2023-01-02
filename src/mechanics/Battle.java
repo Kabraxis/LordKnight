@@ -7,13 +7,17 @@ import entities.Player;
 import texts.Display;
 
 public class Battle {
-    public static void fight(Player player, Monster monster) {
+    public static void fight(Player player) {
+
+        // The values are health, attack, name
+        Monster monster = new Monster(5, 15, "Goblin");
 
         Display.encountering(player.getName(), monster.getName(),
                 player.getHealth(), monster.getHealth());
 
+        /* In the current version the player always has initiative */
+
         int entityHealthPreHit;
-        Decide.selectMenu();
 
         while (player.getHealth() != 0 && monster.getHealth() != 0) {
             if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {

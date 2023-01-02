@@ -1,6 +1,7 @@
 import entities.Player;
 import entities.Monster;
 import mechanics.Battle;
+import mechanics.Decide;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,10 +14,10 @@ public class Main {
         * */
 
         // The values are health, attack, name
-        Player knight = new Player(10, 20, "Sir Knight");
-        Monster goblin = new Monster(5, 15, "Goblin");
+        Player player = new Player(10, 20, "Sir Knight");
+
 
 //        Decide.fight(knight, goblin);
-        Battle.fight(knight, goblin);
+        Decide.selectMenu(player);
     }
 }

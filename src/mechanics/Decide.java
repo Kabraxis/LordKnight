@@ -7,14 +7,15 @@ Todo
 */
 
 import texts.Display;
+import entities.Player;
 
 public class Decide {
-    public static void selectMenu() {
+    public static void selectMenu(Player player) {
         //  Actions and therefore cases are: 1 - attack, 2 - potion, 3 - run
         Display.actions();
         switch (Validate.getIntInput()) {
             case 1: // attack
-                Battle.fight();
+                Battle.fight(player);
                 break;
 
 //            case 2: // potion
