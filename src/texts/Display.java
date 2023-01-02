@@ -25,4 +25,8 @@ public class Display {
         System.out.printf("%s is dead",
                 entityDead);
     }
+
+    public static void invalidAction() {
+        System.out.println("Please only enter a valid action.");
+    }
 }
