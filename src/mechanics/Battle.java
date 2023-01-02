@@ -17,7 +17,12 @@ public class Battle {
 
         /* In the current version the player always has initiative */
 
-
+        /*
+        ToDo
+        - implement check if entity has HP left/is alive
+        - implement an initiative check
+        - the fight action must become more dynamic (DRY-principle)
+        */
 
         // Player/Monster landing a hit is determined here.
         // Get the modulo 100 of a random int, if it's bigger than players attack value, the hit is landed.
