@@ -27,34 +27,32 @@ public class Battle {
         // Player/Monster landing a hit is determined here.
         // Get the modulo 100 of a random int, if it's bigger than players attack value, the hit is landed.
         if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > player.getAttack()) {
-            monster.damage(getDamage(player.getAttack()));
+            int damage = getDamage(player.getAttack());
+            monster.damage(damage);
+            Display.hit(player.getName(), damage);
         } else {
             Display.miss(monster.getName());
         }
 
         // Monster getting damage
         if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {
-            player.damage(getDamage(player.getAttack()));
+            int damage = getDamage(monster.getAttack());
+            player.damage(damage);
+            Display.hit(monster.getName(), damage);
         } else {
             Display.miss(player.getName());
         }
+//
+//            if (player.getHealth() <= 0) {
+//                Display.deathnote(player.getName());
+//            }
+//
+//            if (monster.getHealth() <= 0) {
+//                Display.deathnote(monster.getName());
+//            }
 
-        while (player.getHealth() != 0 && monster.getHealth() != 0) {
-            if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {
-
-                Display.hit(player.getName(), entityHealthPreHit, player.getHealth());
-            }
-
-            if (player.getHealth() <= 0) {
-                Display.deathnote(player.getName());
-            }
-
-            if (monster.getHealth() <= 0) {
-                Display.deathnote(monster.getName());
-            }
-
-        }
     }
+
 
     private static int getDamage(int entityAttackValue) {
         return new Random().nextInt(1, entityAttackValue);

@@ -1,9 +1,9 @@
 package texts;
 
 public class Display {
-    public static void hit(String entityName, int entityHealthPreHit, int entityHealth) {
+    public static void hit(String entityName, int entityDamage) {
         System.out.printf("%s got hit for: %d DMG!\"",
-                entityName, entityHealthPreHit - entityHealth);
+                entityName, entityDamage);
     }
 
     public static void miss(String entityName) {
