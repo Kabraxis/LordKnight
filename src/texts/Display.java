@@ -11,7 +11,7 @@ public class Display {
                 entityName);
     }
 
-    public static void selection() {
+    public static void actions() {
         System.out.println("Select action: 1 - attack, 2 - potion, 3 - run'\n'");
     }
 
