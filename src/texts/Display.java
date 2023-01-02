@@ -2,7 +2,7 @@ package texts;
 
 public class Display {
     public static void hit(String entityName, int entityDamage) {
-        System.out.printf("%s got hit for: %d DMG!\"",
+        System.out.printf("%s got hit for: %d DMG!%n",
                 entityName, entityDamage);
     }
 
