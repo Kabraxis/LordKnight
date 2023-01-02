@@ -17,16 +17,27 @@ public class Battle {
 
         /* In the current version the player always has initiative */
 
-        int entityHealthPreHit;
+
+
+        // Player/Monster landing a hit is determined here.
+        // Get the modulo 100 of a random int, if it's bigger than players attack value, the hit is landed.
+        if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > player.getAttack()) {
+            monster.damage(getDamage(player.getAttack()));
+        } else {
+            Display.miss(monster.getName());
+        }
+
+        // Monster getting damage
+        if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {
+            player.damage(getDamage(player.getAttack()));
+        } else {
+            Display.miss(player.getName());
+        }
 
         while (player.getHealth() != 0 && monster.getHealth() != 0) {
             if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {
-                entityHealthPreHit = player.getHealth();
 
-                player.setHealth(player.getHealth() - (new Random().nextInt(1, monster.getAttack())));
                 Display.hit(player.getName(), entityHealthPreHit, player.getHealth());
-            } else {
-                Display.miss(monster.getName());
             }
 
             if (player.getHealth() <= 0) {
@@ -38,6 +49,10 @@ public class Battle {
             }
 
         }
+    }
+
+    private static int getDamage(int entityAttackValue) {
+        return new Random().nextInt(1, entityAttackValue);
     }
 }
 
