@@ -1,6 +1,10 @@
 package entities;
 
+import java.util.Random;
+
 public class Mob extends Entity {
+
+    private int initiative;
 
     public Mob() {
         super();
@@ -46,4 +50,11 @@ public class Mob extends Entity {
         super.setHealth(super.getHealth() - damage);
     }
 
+    public void setInitiative() {
+        this.initiative = new Random().nextInt(0, Integer.MAX_VALUE);
+    }
+
+    public int getInitiative() {
+        return initiative;
+    }
 }
