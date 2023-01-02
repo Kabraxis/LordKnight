@@ -42,4 +42,7 @@ public class Player extends Entity {
         super.setName(name);
     }
 
+    public void damage(int damage) {
+        super.setHealth(super.getHealth() - damage);
+    }
 }
