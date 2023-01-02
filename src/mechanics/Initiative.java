@@ -1,7 +1,7 @@
 package mechanics;
 
 public class Initiative {
-    public static  void whosCharge() {
+    public static void whoseCharge() {
 
     }
 }

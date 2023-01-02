@@ -13,7 +13,7 @@ public class Battle {
                 player.getHealth(), monster.getHealth());
 
         int entityHealthPreHit;
-        Action.selectMenu();
+        Decide.selectMenu();
 
         while (player.getHealth() != 0 && monster.getHealth() != 0) {
             if (new Random().nextInt(0, Integer.MAX_VALUE) % 100 > monster.getAttack()) {

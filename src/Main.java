@@ -1,7 +1,6 @@
 import entities.Player;
 import entities.Monster;
 import mechanics.Battle;
-import mechanics.Action;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +16,7 @@ public class Main {
         Player knight = new Player(10, 20, "Sir Knight");
         Monster goblin = new Monster(5, 15, "Goblin");
 
-//        Action.fight(knight, goblin);
+//        Decide.fight(knight, goblin);
         Battle.fight(knight, goblin);
     }
 }
