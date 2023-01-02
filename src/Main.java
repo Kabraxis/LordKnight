@@ -1,6 +1,4 @@
 import entities.Player;
-import entities.Monster;
-import mechanics.Battle;
 import mechanics.Decide;
 
 public class Main {

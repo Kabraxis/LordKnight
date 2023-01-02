@@ -1,20 +1,20 @@
 package entities;
 
-public class Monster extends Entity {
+public class Mob extends Entity {
 
-    public Monster() {
+    public Mob() {
         super();
     }
 
-    public Monster(int health) {
+    public Mob(int health) {
         super(health);
     }
 
-    public Monster(int health, int attack) {
+    public Mob(int health, int attack) {
         super(health, attack);
     }
 
-    public Monster(int health, int attack, String name) {
+    public Mob(int health, int attack, String name) {
         super(health, attack, name);
     }
 
