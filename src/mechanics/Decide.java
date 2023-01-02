@@ -10,7 +10,6 @@ import texts.Display;
 
 public class Decide {
     public static void selectMenu() {
-
         //  Actions and therefore cases are: 1 - attack, 2 - potion, 3 - run
         Display.actions();
         switch (Validate.getIntInput()) {
