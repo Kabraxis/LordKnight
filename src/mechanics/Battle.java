@@ -9,8 +9,8 @@ import texts.Display;
 public class Battle {
     public static void fight(Player player) {
 
-        // The values are health, attack, name
-        Mob mob = new Mob(5, 15, "Goblin");
+        // Getting a new random mob
+        Mob mob = MobCreation.create();
 
         Display.encountering(player.getName(), mob.getName(),
                 player.getHealth(), mob.getHealth());
