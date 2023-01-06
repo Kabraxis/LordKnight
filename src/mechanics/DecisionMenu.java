@@ -26,7 +26,8 @@ public class DecisionMenu {
 
             // Run will cause an initiative check: If player looses they'll have to fight
             case 3: // run
-                Initiative.whoseCharge();
+                player.setInitiative();
+                mob.setInitiative();
                 break;
 
             default:

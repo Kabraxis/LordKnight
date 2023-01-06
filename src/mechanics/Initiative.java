@@ -1,8 +1,12 @@
 package mechanics;
 
-public class Initiative {
-    public static void whoseCharge() {
+import entities.Mob;
+import entities.Player;
 
+public class Initiative {
+    public static void whoseCharge(Player player, Mob mob) {
+        player.setInitiative();
+        mob.setInitiative();
     }
 }
 

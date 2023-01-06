@@ -5,6 +5,7 @@ import java.util.Random;
 public class Player extends Entity {
 
     private int initiative;
+    private boolean hasInitiative;
 
     public Player() {
         super();
@@ -57,4 +58,5 @@ public class Player extends Entity {
     public int getInitiative() {
         return initiative;
     }
+
 }
