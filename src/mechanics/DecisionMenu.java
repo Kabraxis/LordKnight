@@ -9,11 +9,13 @@ Todo
 import texts.Display;
 import entities.Player;
 
+import java.util.Scanner;
+
 public class DecisionMenu {
     public static void select(Player player) {
         //  Actions and therefore cases are: 1 - attack, 2 - potion, 3 - run
         Display.actions();
-        switch (Validate.getIntInput()) {
+        switch (validateInput()) {
             case 1: // attack
                 Battle.fight(player);
                 break;
@@ -33,4 +35,16 @@ public class DecisionMenu {
         }
 
     }
+
+    private static int validateInput() {
+        Scanner scanner = new Scanner(System.in);
+
+        while (!scanner.hasNextInt(1 | 2 | 3)) {
+            Display.invalidAction();
+            Display.actions();
+            scanner.next(); // clears scanner
+        }
+        return scanner.nextInt();
+    }
+
 }
