@@ -1,5 +1,5 @@
 import entities.Player;
-import mechanics.Decide;
+import mechanics.DecisionMenu;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Main {
         Player player = new Player(10, 20, "Sir Knight");
 
 
-//        Decide.fight(knight, goblin);
-        Decide.selectMenu(player);
+//        DecisionMenu.fight(knight, goblin);
+        DecisionMenu.select(player);
     }
 }

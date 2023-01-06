@@ -9,8 +9,8 @@ Todo
 import texts.Display;
 import entities.Player;
 
-public class Decide {
-    public static void selectMenu(Player player) {
+public class DecisionMenu {
+    public static void select(Player player) {
         //  Actions and therefore cases are: 1 - attack, 2 - potion, 3 - run
         Display.actions();
         switch (Validate.getIntInput()) {
