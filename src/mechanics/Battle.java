@@ -10,7 +10,7 @@ public class Battle {
     public static void fight(Player player) {
 
         // Getting a new random mob
-        Mob mob = RandomMob.create();
+        Mob mob = Mob.spawn();
 
         Display.encountering(player.getName(), mob.getName(),
                 player.getHealth(), mob.getHealth());

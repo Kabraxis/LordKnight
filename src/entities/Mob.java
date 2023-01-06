@@ -6,6 +6,9 @@ public class Mob extends Entity {
 
     private int initiative;
 
+    private static final String[] MOB_NAMES = {"Guys with a Pig", "Copper Wretches", "Wild Fellas",
+            "Wizard Blokes", "Exploiting Kittens"};
+
     public Mob() {
         super();
     }
@@ -56,5 +59,15 @@ public class Mob extends Entity {
 
     public int getInitiative() {
         return initiative;
+    }
+
+    // This is where the random baby mobs come from
+    public static Mob spawn() {
+        String[] mobNames = new String[Mob.MOB_NAMES.length];
+        System.arraycopy(Mob.MOB_NAMES, 0, mobNames, 0, mobNames.length);
+
+        return new Mob(new Random().nextInt(10, 150),
+                new Random().nextInt(10, 20),
+                mobNames[new Random().nextInt(0, 4)]);
     }
 }
