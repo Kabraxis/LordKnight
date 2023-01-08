@@ -6,7 +6,7 @@ import entities.Mob;
 import entities.Player;
 import texts.Display;
 
-public class Battle {
+public class Encounter {
     public static void fight(Player player) {
 
         // Getting a new random mob
