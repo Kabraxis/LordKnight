@@ -59,4 +59,8 @@ public class Player extends Entity {
         return initiative;
     }
 
+    // The values are health, attack, name
+    public static Player spawn() {
+        return new Player(100, 20, new java.util.Scanner(System.in).nextLine());
+    }
 }

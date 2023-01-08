@@ -11,8 +11,10 @@ public class Main {
         *
         * */
 
-        // The values are health, attack, name
-        Player player = new Player(10, 20, "Sir Knight");
+Wählt man Potion, muss ebenfalls die Initiative verglichen werden, da pro Runde nur eine Aktion ausgeführt werden kann,
+entweder Kampf, Flucht oder Potion.
+
+ */
 
 
 //        DecisionMenu.fight(knight, goblin);
