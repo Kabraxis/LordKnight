@@ -8,16 +8,17 @@ Todo
 
 import texts.Display;
 import entities.Player;
+import entities.Mob;
 
 import java.util.Scanner;
 
 public class DecisionMenu {
-    public static void select(Player player) {
+    public static void select(Player player, Mob mob) {
         //  Actions and therefore cases are: 1 - attack, 2 - potion, 3 - run
         Display.actions();
         switch (validateInput()) {
             case 1: // attack
-                Battle.fight(player);
+                Encounter.fight(player);
                 break;
 
 //            case 2: // potion
