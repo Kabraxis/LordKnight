@@ -21,7 +21,7 @@ applied.
 
 The higher value will have the initiative.
 
-Initiative will be set inside Battle.java for
+Initiative will be set inside Encounter.java for
 the fight's duration, and will reset at the end.
 
 Player is wandering around. If they see a monster, they
